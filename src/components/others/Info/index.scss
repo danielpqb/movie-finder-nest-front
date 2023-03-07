@@ -1,0 +1,40 @@
+.info {
+  margin-top: 100px;
+  margin-bottom: 30px;
+
+  padding: 20px;
+
+  height: fit-content;
+
+  flex-direction: column;
+
+  backdrop-filter: blur(3px) saturate(100%);
+  -webkit-backdrop-filter: blur(3px) saturate(100%);
+  box-shadow: 1.5px 1.5px 3.1px rgba(0, 0, 0, 0.045),
+    4.8px 4.8px 7.4px rgba(0, 0, 0, 0.065);
+
+  .title,
+  .text {
+    height: fit-content;
+
+    color: #000000;
+    background-image: -webkit-linear-gradient(45deg, #696969 30%, #000000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: sans-serif;
+  }
+
+  .title {
+    margin-bottom: 10px;
+
+    font-weight: bold;
+    font-size: 52px;
+  }
+
+  .text {
+    line-height: 20px;
+    font-size: 18px;
+  }
+}
