@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  height: 100px;
+
+  top: 0;
+
+  padding: 20px;
+
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+
+  .search {
+    width: 800px;
+  }
+}
