@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setSearch } from "../../../contexts/movie";
+import { setMovie, setSearch } from "../../../contexts/movie";
 import { RootState } from "../../../main";
+import { getMoviesByTitle } from "../../../services/movies-services";
 import InputBox from "../InputBox/InputBox";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import "./index.scss";
@@ -18,12 +19,29 @@ export default function Header() {
             onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
               dispatch(setSearch(e.target.value));
             },
-            placeholder: "Search",
+            placeholder: "Search movies by title",
             value: search,
           }}
         />
-        <SubmitButton>Search</SubmitButton>
-        <SubmitButton>Clear</SubmitButton>
+        <SubmitButton
+          onClick={async () => {
+            const res = await getMoviesByTitle(search);
+            console.log(res.data);
+
+            dispatch(setMovie(res.data));
+          }}
+        >
+          Search
+        </SubmitButton>
+        <SubmitButton
+          style={{ backgroundColor: "rgba(140,140,140)" }}
+          onClick={() => {
+            dispatch(setSearch(""));
+            dispatch(setMovie({}));
+          }}
+        >
+          Clear
+        </SubmitButton>
       </div>
     </div>
   );
