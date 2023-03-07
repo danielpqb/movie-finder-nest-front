@@ -1,21 +1,24 @@
 .inputBox {
-  background: #ffffff;
   border-radius: 5px;
 
   input {
     font-family: "Oswald";
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    color: #6d6d6d;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    border: 5px solid rgba(0, 0, 0, 0.5);
     outline: none;
-    border-radius: 5px;
+    border-radius: 9px;
     height: 50px;
     padding: 0px 10px;
   }
 
+  input:focus {
+    border: 5px solid rgba(0, 70, 0, 0.5);
+  }
+
   input::placeholder {
-    color: #afafaf;
+    color: rgb(126, 126, 126);
   }
 }

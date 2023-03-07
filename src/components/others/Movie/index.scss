@@ -1,6 +1,22 @@
 .movie {
   height: 50vh;
   max-width: 800px;
+  padding: 30px;
+
+  backdrop-filter: blur(4px) saturate(120%);
+  -webkit-backdrop-filter: blur(4px) saturate(120%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.6);
+
+  box-shadow:
+  1.5px 1.5px 3.1px rgba(0, 0, 0, 0.045),
+  4.8px 4.8px 7.4px rgba(0, 0, 0, 0.065),
+  10.3px 10.3px 13.8px rgba(0, 0, 0, 0.08),
+  19.3px 19.3px 23.5px rgba(0, 0, 0, 0.095),
+  34.3px 34.3px 39.8px rgba(0, 0, 0, 0.115),
+  70px 70px 80px rgba(0, 0, 0, 0.16)
+;
 
   .data {
     flex-direction: column;
@@ -21,12 +37,12 @@
       font-weight: bold;
       margin-bottom: 20px;
     }
-    
+
     .description {
       font-size: 16px;
       margin-bottom: 20px;
     }
-    
+
     .actors {
       font-size: 16px;
       margin-bottom: 6px;

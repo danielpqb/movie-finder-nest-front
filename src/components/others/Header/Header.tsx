@@ -4,6 +4,7 @@ import { RootState } from "../../../main";
 import { getMoviesByTitle } from "../../../services/movies-services";
 import InputBox from "../InputBox/InputBox";
 import SubmitButton from "../SubmitButton/SubmitButton";
+import { RiMovie2Line } from "react-icons/ri";
 import "./index.scss";
 
 export default function Header() {
@@ -12,6 +13,12 @@ export default function Header() {
 
   return (
     <div className="header">
+      <div className="logo">
+        <RiMovie2Line
+          size={"40px"}
+          fill={"rgba(255,255,255,0.9)"}
+        />
+      </div>
       <div className="search">
         <InputBox
           data={{
@@ -34,7 +41,7 @@ export default function Header() {
           Search
         </SubmitButton>
         <SubmitButton
-          style={{ backgroundColor: "rgba(140,140,140)" }}
+          style={{ backgroundColor: "rgba(100, 100, 100, 0.4)" }}
           onClick={() => {
             dispatch(setSearch(""));
             dispatch(setMovie({}));
