@@ -49,12 +49,8 @@ export default function Header() {
                 dispatch(setMovie(res.data));
 
                 animate({ id: "movie", name: "flipInX" });
-
-                console.log(res.data);
               } catch {
                 setDisabled(false);
-
-                console.log("feewfewf");
                 const { ref, close } = Modals.showDialog({
                   state: "Error",
                   headerText: "Error",
