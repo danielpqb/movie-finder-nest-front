@@ -1,8 +1,15 @@
 .home {
-  background-image: url("./bg-waves.svg");
+  position: relative;
+
+  // background-image: url("./bg-waves.svg");
   background-repeat: no-repeat;
   background-size: cover;
 
   flex-direction: column;
   justify-content: flex-start;
+
+  .home-bg {
+    position: absolute;
+    object-fit: cover;
+  }
 }
